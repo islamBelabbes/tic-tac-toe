@@ -8,7 +8,7 @@ function App() {
     <div className="flex items-center justify-center w-screen min-h-screen p-3 bg-primary">
       <div className="bg-secondary w-full md:w-[500px] min-h-0 h-[600px] p-10 flex flex-col gap-10 rounded-[30px]">
         <Board score={helpers.score} />
-        <Boxes {...helpers} />
+        <Cells {...helpers} />
         {helpers.isGameOver && (
           <button
             onClick={helpers.resetGame}
@@ -44,7 +44,7 @@ const Board = ({ score }) => {
   );
 };
 
-const Boxes = ({ cells, isGameOver, handleClick, victory }) => {
+const Cells = ({ cells, isGameOver, handleClick, victory }) => {
   return (
     <>
       <div className="grid items-center grid-cols-3 gap-y-2">
